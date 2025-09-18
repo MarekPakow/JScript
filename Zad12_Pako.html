@@ -1,0 +1,33 @@
+<!DOCTYPE html>   
+<head>    
+<title> proste obliczenia</title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:green;font-size:49px;"> 
+<script language="JavaScript"> 
+  // Marek Pakowski   11.09.2025 
+// Zadanie 11  
+var liczba1_Pak=prompt("Podaj liczbe D1 ",""); 
+var godzina1_Pak=prompt("Podaj godzine G1","");
+var liczba2_Pak=prompt("Podaj liczbe D2",""); 
+var godzina2_Pak=prompt("Podaj godzine G2",""); 
+var suma; 
+var a=parseFloat(liczba1_Pak); 
+var c=parseFloat(liczba2_Pak); 
+var b=parseFloat(godzina1_Pak);
+var d=parseFloat(godzina2_Pak);
+suma1=(a*86400)+(b*3600); 
+suma2=(c*86400)+(d*3600);
+suma3=(suma1)-(suma2);
+
+document.write("D1= " +a+"<br>");
+document.write("G1= " +b+"<br>");
+document.write("D2= " +c+"<br>");
+document.write("G2= " +d+"<br>");
+document.write("Mineło " +suma3+ " sekund<br>");  
+</script> 
+</div> 
+</body> 
+
+</html> 
