@@ -1,0 +1,47 @@
+ 
+<!DOCTYPE html>   
+  <head> 
+  <title>Kod zad 11</title>
+   
+</head>  
+ <body>
+<textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 16(A+B)^3</title>
+</head>
+<body>
+
+<script>
+// Marek Pakowski 2P
+var A = parseInt(prompt("Podaj pierwszą liczbę A="));
+var B = parseInt(prompt("Podaj drugą liczbę B="));
+
+// wyświetlenie wczytanych liczb
+document.write("wczytane liczby: A=" + A + " B=" + B + "<br><br>");
+
+// obliczenia według wzoru (A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3
+var A3 = A**3;
+var cz1 = 3 * (A**2) * B;
+var cz2 = 3 * A * (B**2);
+var B3 = B**3;
+var wynik = A3 + cz1 + cz2 + B3;
+
+// wyświetlenie obliczeń w zadanym formacie
+document.write("(" + A + " + " + B + ")^3 = " 
+    + A + "^3 + 3*(" + A + ")^2*(" + B + ") + 3*(" + A + ")*(" + B + ")^2 + " + B + "^3 = "
+    + A3 + " + " + cz1 + " + " + cz2 + " + " + B3 + " = " + wynik);
+</script>
+
+</body>
+</html>
+
+  </textarea>
+  </body>  
+
+</html>    
+
+
+
