@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Zad 18 </title>
+ <meta charset="utf-8">
+</head>
+<body>
+ <div style="color:navy;font-size:30px;">
+ <script language="JavaScript">
+    var a = parseFloat(prompt("Podaj a:", ""));
+    var b = parseFloat(prompt("Podaj b:", ""));
+
+   
+    function suma_pako(a, b) {
+        return a + b;
+    }
+
+    function odejmowanie_pako(a, b) {
+        return a - b;
+    }
+
+    function mnozenie_pako(a, b) {
+        return a * b;
+    }
+
+   
+    function od_kwadratu_pako(a, b) {
+        return "a^2=" + (a*a) + " | b^2=" + (b*b);
+    }
+
+  
+    function reszta_z_dzielenia_a_przez_b_pako(a, b) {
+        return a % b;
+    }
+
+    document.write("suma = " + suma_pako(a,b) + "<br>");
+    document.write("odejmowanie = " + odejmowanie_pako(a,b) + "<br>");
+    document.write("mnożenie = " + mnozenie_pako(a,b) + "<br>");
+    document.write("kwadraty → " + od_kwadratu_pako(a,b) + "<br>");
+    document.write("reszta z dzielenia a przez b = " + reszta_z_dzielenia_a_przez_b_pako(a,b) + "<br>");
+ </script>
+ </div>
+</body>
+</html>
