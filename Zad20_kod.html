@@ -24,14 +24,14 @@
 <p>Punkt C: x=<input type="number" id="xc_pako"> 
             y=<input type="number" id="yc_pako"></p>
 
-<button onclick="AB_kry()">Oblicz AB</button>
-<button onclick="BC_kry()">Oblicz BC</button>
-<button onclick="AC_kry()">Oblicz AC</button>
+<button onclick="AB_pako()">Oblicz AB</button>
+<button onclick="BC_pako()">Oblicz BC</button>
+<button onclick="AC_pako()">Oblicz AC</button>
 
 <div id="wynik"></div>
 
 <script>
-function AB_kry() {
+function AB_pako() {
     var xa = parseFloat(document.getElementById("xa_pako").value);
     var ya = parseFloat(document.getElementById("ya_pako").value);
     var xb = parseFloat(document.getElementById("xb_pako").value);
@@ -40,7 +40,7 @@ function AB_kry() {
     document.getElementById("wynik").innerHTML = "Długość AB = " + ab.toFixed(2);
 }
 
-function BC_kry() {
+function BC_pako() {
     var xb = parseFloat(document.getElementById("xb_pako").value);
     var yb = parseFloat(document.getElementById("yb_pako").value);
     var xc = parseFloat(document.getElementById("xc_pako").value);
@@ -49,7 +49,7 @@ function BC_kry() {
     document.getElementById("wynik").innerHTML = "Długość BC = " + bc.toFixed(2);
 }
 
-function AC_kry() {
+function AC_pako() {
     var xa = parseFloat(document.getElementById("xa_pako").value);
     var ya = parseFloat(document.getElementById("ya_pako").value);
     var xc = parseFloat(document.getElementById("xc_pako").value);
@@ -67,6 +67,7 @@ function AC_kry() {
   </body>  
 
 </html>    
+
 
 
 
