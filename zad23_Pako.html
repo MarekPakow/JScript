@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pakowski-Zadanie23</title>
+    <script>
+        // Funkcja obliczająca długość drabiny
+        function dlugoscDrabiny(d, x) {
+            var d_pako = parseFloat(d);
+            var x_pako = parseFloat(x);
+            var c = Math.sqrt(d_pako * d_pako + x_pako * x_pako);
+            return c;
+        }
+
+       
+        function katNachylenia(d, x) {
+            var d_pako = parseFloat(d);
+            var x_pako = parseFloat(x);
+            var x_kat = Math.atan(d_pako / x_pako) * (180 / Math.PI); // arcustangens w stopniach
+            return x_kat;
+        }
+
+       
+        function zadanie23() {
+            var d = document.getElementsByName('wysokosc')[0].value;
+            var x = document.getElementsByName('odleglosc')[0].value;
+
+            var c = dlugoscDrabiny(d, x);
+            var x_kat = katNachylenia(d, x);
+
+           
+            document.getElementsByName('dlugosc')[0].value = c.toFixed(2);
+            document.getElementsByName('kat')[0].value = x_kat.toFixed(2);
+
+           
+            document.getElementById('pokaz1').innerHTML = "Długość drabiny = " + c.toFixed(2) + " m";
+            document.getElementById('pokaz2').innerHTML = "Kąt alfa = " + x_kat.toFixed(2) + ;
+
+           
+            alert("Długość drabiny: " + c.toFixed(2) + " m\nKąt alfa: " + x_kat.toFixed(2) + "°");
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    Obliczanie odległości od drabiny i kąta<br><br>
+    <form onsubmit="return zadanie23();">
+        Podaj d=
+        <input type="text" name="wysokosc" size="6">
+        Podaj x= 
+        <input type="text" name="odleglosc" size="6"><br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Drabina=
+        <input type="text" name="dlugosc" size="6">
+        Alfa=
+        <input type="text" name="kat" size="6">
+    </form>
+    <br>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+</html>

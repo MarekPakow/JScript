@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczenie pola i obwodu prostokąta - Pakowski</title>
+    <script language="JavaScript">
+        function Pole_Pakowski(a_pako, b_pako) {
+            let a_liczba = parseFloat(a_pako);
+            let b_liczba = parseFloat(b_pako);
+            let pole_wynik = a_liczba * b_liczba;
+            document.getElementsByName('pole')[0].value = pole_wynik.toFixed(2);
+            wyprowadz_pole_pako.innerHTML = "Pole = " + pole_wynik.toFixed(2);
+        }
+
+        function obwod_Pakowski(a_pako, b_pako) {
+            let a_liczba = parseFloat(a_pako);
+            let b_liczba = parseFloat(b_pako);
+            let obwod_wynik = 2 * (a_liczba + b_liczba);
+            document.getElementsByName('obw')[0].value = obwod_wynik.toFixed(2);
+            wyprowadz_obwod_pako.innerHTML = "Obwód = " + obwod_wynik.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie pola i obwodu prostokąta</h2>
+    <form name="formularz" 
+          onsubmit="Pole_Pakowski(this.a_dana_pako.value, this.b_dana_pako.value);
+                    obwod_Pakowski(this.a_dana_pako.value, this.b_dana_pako.value); 
+                    return false;">
+        Podaj a = <input size="6" name="a_dana_pako">
+        Podaj b = <input size="6" name="b_dana_pako">
+        <br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Pole = <input size="6" name="pole">
+        Obwód = <input size="6" name="obw">
+    </form>
+
+    <table>
+        <tr id="wyprowadz_pole_pako"></tr>
+        <tr id="wyprowadz_obwod_pako"></tr>
+    </table>
+</body>
+</html>
