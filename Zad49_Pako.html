@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>   
+<head>    
+<title>Obliczanie silni </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:50px;"> 
+<script language="JavaScript">
+do { 
+ var liczba_pak=prompt("N=",""); 
+var N_pak=parseFloat(liczba_pak);
+} 
+while ( N_pak<0); 
+
+var suma_pak = 1;
+
+for(i_pak=1;i_pak<=N_pak;i_pak++)
+{
+suma_pak*=i_pak;
+} 
+
+document.write("N="+N_pak+"<br>");
+
+document.write("Suma="+suma_pak+"<br>");
+
+
+</script> 
+</div> 
+</body> 
+</html> 
